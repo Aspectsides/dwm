@@ -2,7 +2,9 @@
 
 xrdb merge ~/.Xresources 
 xbacklight -set 10 &
-feh --bg-fill ~/Nextcloud3/neon.png &
+dunst -b &
+flameshot &
+exec /home/aspect/.fehbg &
 xset r rate 200 50 &
 picom &
 
