@@ -37,11 +37,11 @@ static const int new_window_attach_on_end = 0; /*  1 means the new window will a
 #define ICONSIZE 19   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19",
+static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font:style:medium:size=19",
                                         "Material Design Icons Desktop:size=11" };
 
 // theme
-#include "themes/onedark.h"
+#include "themes/catppuccin.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
@@ -150,10 +150,12 @@ static const Key keys[] = {
 
     { MODKEY,                           XK_e,       spawn,          SHCMD("emacsclient -c") },
     { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
-    { MODKEY,                           XK_w,       spawn,          SHCMD("librewolf") },
+    { MODKEY,                           XK_w,       spawn,          SHCMD("brave") },
     { MODKEY,                           XK_p,       spawn,          SHCMD("/home/aspect/.local/bin/powermenu") },
     { MODKEY|ControlMask,               XK_p,       spawn,          SHCMD("pomo") },
     { MODKEY,                           XK_Return,  spawn,            SHCMD("st")},
+    { MODKEY|ShiftMask,                 XK_d,  spawn,            SHCMD("brave http://192.168.1.14:8902/")},
+    { MODKEY|ShiftMask,                 XK_f,  spawn,            SHCMD("st -e lfrun")},
 
     // toggle stuff
     { MODKEY,                           XK_b,       togglebar,      {0} },
@@ -206,7 +208,7 @@ static const Key keys[] = {
 
     // layout
     { MODKEY,                           XK_t,       setlayout,      {.v = &layouts[0]} },
-    { MODKEY|ShiftMask,                 XK_f,       setlayout,      {.v = &layouts[1]} },
+    { MODKEY|ControlMask,               XK_f,       setlayout,      {.v = &layouts[1]} },
     { MODKEY,                           XK_m,       setlayout,      {.v = &layouts[2]} },
     { MODKEY|ControlMask,               XK_g,       setlayout,      {.v = &layouts[10]} },
     { MODKEY|ControlMask|ShiftMask,     XK_t,       setlayout,      {.v = &layouts[13]} },
