@@ -37,11 +37,11 @@ static const int new_window_attach_on_end = 0; /*  1 means the new window will a
 #define ICONSIZE 19   /* icon size */
 #define ICONSPACING 8 /* space between icon and title */
 
-static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font:style:medium:size=19",
+static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19",
                                         "Material Design Icons Desktop:size=11" };
 
 // theme
-#include "themes/catppuccin.h"
+#include "themes/nord.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
@@ -154,7 +154,7 @@ static const Key keys[] = {
     { MODKEY,                           XK_p,       spawn,          SHCMD("/home/aspect/.local/bin/powermenu") },
     { MODKEY|ControlMask,               XK_p,       spawn,          SHCMD("pomo") },
     { MODKEY,                           XK_Return,  spawn,            SHCMD("st")},
-    { MODKEY|ShiftMask,                 XK_d,  spawn,            SHCMD("brave http://192.168.1.14:8902/")},
+    { MODKEY|ShiftMask,                 XK_d,  spawn,            SHCMD("brave http://192.168.1.6:7575/")},
     { MODKEY|ShiftMask,                 XK_f,  spawn,            SHCMD("st -e lfrun")},
 
     // toggle stuff
