@@ -63,7 +63,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static char *tags[] = {"", "", "", "", ""};
+static char *tags[] = {"", "", "", "", ""};
 
 static const char* eww[] = { "eww", "open" , "eww", NULL };
 
@@ -150,11 +150,11 @@ static const Key keys[] = {
 
     { MODKEY,                           XK_e,       spawn,          SHCMD("emacsclient -c") },
     { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
-    { MODKEY,                           XK_w,       spawn,          SHCMD("brave") },
+    { MODKEY,                           XK_w,       spawn,          SHCMD("firefox") },
     { MODKEY,                           XK_p,       spawn,          SHCMD("/home/aspect/.local/bin/powermenu") },
     { MODKEY|ControlMask,               XK_p,       spawn,          SHCMD("pomo") },
     { MODKEY,                           XK_Return,  spawn,            SHCMD("st")},
-    { MODKEY|ShiftMask,                 XK_d,  spawn,            SHCMD("brave http://192.168.1.6:7575/")},
+    { MODKEY|ShiftMask,                 XK_d,  spawn,            SHCMD("firefox http://192.168.1.6:7575/")},
     { MODKEY|ShiftMask,                 XK_f,  spawn,            SHCMD("st -e lfrun")},
 
     // toggle stuff
