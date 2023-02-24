@@ -41,7 +41,7 @@ static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrain
                                         "Material Design Icons Desktop:size=11" };
 
 // theme
-#include "themes/nord.h"
+#include "themes/decay.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
@@ -154,6 +154,7 @@ static const Key keys[] = {
     { MODKEY,                           XK_p,       spawn,          SHCMD("/home/aspect/.local/bin/powermenu") },
     { MODKEY|ControlMask,               XK_p,       spawn,          SHCMD("pomo") },
     { MODKEY,                           XK_Return,  spawn,            SHCMD("st")},
+    { MODKEY,                           XK_m,  spawn,            SHCMD("st -e neomutt")},
     { MODKEY|ShiftMask,                 XK_d,  spawn,            SHCMD("firefox http://192.168.1.6:7575/")},
     { MODKEY|ShiftMask,                 XK_f,  spawn,            SHCMD("st -e lfrun")},
 
@@ -209,7 +210,6 @@ static const Key keys[] = {
     // layout
     { MODKEY,                           XK_t,       setlayout,      {.v = &layouts[0]} },
     { MODKEY|ControlMask,               XK_f,       setlayout,      {.v = &layouts[1]} },
-    { MODKEY,                           XK_m,       setlayout,      {.v = &layouts[2]} },
     { MODKEY|ControlMask,               XK_g,       setlayout,      {.v = &layouts[10]} },
     { MODKEY|ControlMask|ShiftMask,     XK_t,       setlayout,      {.v = &layouts[13]} },
     { MODKEY,                           XK_space,   setlayout,      {0} },
